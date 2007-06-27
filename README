@@ -1,0 +1,68 @@
+wyrd
+------------------------------------------
+Wyrd is a text-based front-end to Remind, a sophisticated calendar and 
+alarm program. Remind's power lies in its programmability, and Wyrd does 
+not hide this capability behind flashy GUI dialogs. Rather, Wyrd is 
+designed to make you more efficient at editing your reminder files 
+directly. It also offers a scrollable timetable suitable for visualizing 
+your schedule at a glance.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  libncurses8-5.5-3
+  remind-03.00.24-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  binutils-20060817-1
+  cygport-0.3.1-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  make-3.81-1
+  ocaml-3.09.3-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.eecs.umich.edu/~pelzlpj/wyrd/
+
+Canonical download:
+  http://www.eecs.umich.edu/~pelzlpj/wyrd/
+
+-------------------------------------------
+
+Build instructions:
+  unpack wyrd-1.4.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./wyrd-1.4.2-X.cygport all
+
+This will create:
+  /usr/src/wyrd-1.4.2-X-src.tar.bz2
+  /usr/src/wyrd-1.4.2-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/wyrdrc
+  /usr/bin/wyrd.exe
+  /usr/share/doc/Cygwin/wyrd-1.4.2.README
+  /usr/share/doc/wyrd-1.4.2/COPYING
+  /usr/share/doc/wyrd-1.4.2/ChangeLog
+  /usr/share/doc/wyrd-1.4.2/README
+  /usr/share/man/man1/wyrd.1.gz
+  /usr/share/man/man5/wyrdrc.5.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.4.2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
