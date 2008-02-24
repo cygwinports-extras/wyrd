@@ -1,0 +1,18 @@
+inherit ocaml
+
+DESCRIPTION="Curses frontend for remind"
+HOMEPAGE="http://pessimization.com/software/wyrd/"
+SRC_URI="http://pessimization.com/software/wyrd/${P}.tar.gz"
+
+MAKEOPTS+=" EXE=.exe"
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	lndirs
+
+	cd ${B}
+	CPPFLAGS+=" -I/usr/include/ncurses"
+	cygconf
+	cygmake
+}

@@ -14,14 +14,14 @@ Runtime requirements:
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.25-7
   autoconf2.5-2.61-1
   binutils-20060817-1
   cygport-0.3.8-1
-  gawk-3.1.5-4
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
   make-3.81-1
-  ocaml-3.10.0-1
+  ocaml-3.10.1-1
+  ocaml-camlp4-3.10.1-1
   sed-4.1.5-2
 
 Canonical website:
@@ -33,15 +33,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack wyrd-1.4.3a-X-src.tar.bz2
+  unpack wyrd-1.4.4-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./wyrd-1.4.3a-X.cygport all
+  cygport ./wyrd-1.4.4-X.cygport all
 
 This will create:
-  /usr/src/wyrd-1.4.3a-X-src.tar.bz2
-  /usr/src/wyrd-1.4.3a-X.tar.bz2
+  /usr/src/wyrd-1.4.4-X-src.tar.bz2
+  /usr/src/wyrd-1.4.4-X.tar.bz2
 
 -------------------------------------------
 
@@ -49,16 +49,19 @@ Files included in the binary package:
 
   /etc/wyrdrc
   /usr/bin/wyrd.exe
-  /usr/share/doc/Cygwin/wyrd-1.4.3a.README
-  /usr/share/doc/wyrd-1.4.3a/COPYING
-  /usr/share/doc/wyrd-1.4.3a/ChangeLog
-  /usr/share/doc/wyrd-1.4.3a/README
+  /usr/share/doc/Cygwin/wyrd-1.4.4.README
+  /usr/share/doc/wyrd-1.4.4/COPYING
+  /usr/share/doc/wyrd-1.4.4/ChangeLog
+  /usr/share/doc/wyrd-1.4.4/README
   /usr/share/man/man1/wyrd.1.gz
   /usr/share/man/man5/wyrdrc.5.gz
 
 ------------------
 
 Port Notes:
+
+----- version 1.4.4-1 -----
+Version bump.
 
 ----- version 1.4.3a-1 -----
 Version bump.
