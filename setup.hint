@@ -1,5 +1,5 @@
 category: Utils
-requires: libncurses8 remind
+requires: libncursesw10 remind
 sdesc: "Curses frontend for Remind"
 ldesc: "Wyrd is a text-based front-end to Remind, a sophisticated 
 calendar and alarm program. Remind's power lies in its programmability, 
