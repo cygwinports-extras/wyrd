@@ -1,0 +1,31 @@
+inherit ocaml
+
+NAME="wyrd"
+VERSION=1.4.6
+RELEASE=1
+CATEGORY="Utils"
+SUMMARY="Curses frontend for Remind"
+DESCRIPTION="Wyrd is a text-based front-end to Remind, a sophisticated calendar
+and alarm program. Remind's power lies in its programmability, and Wyrd does
+not hide this capability behind flashy GUI dialogs. Rather, Wyrd is designed to
+make you more efficient at editing your reminder files directly. It also offers
+a scrollable timetable suitable for visualizing your schedule at a glance."
+REQUIRES="remind"
+HOMEPAGE="http://pessimization.com/software/wyrd/"
+SRC_URI="http://pessimization.com/software/wyrd/${P}.tar.gz"
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	lndirs
+	cd ${B}
+	cygconf --enable-utf8 ac_cv_header_windows_h=no
+	cygmake -j1
+}
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	make_etc_defaults /etc/wyrdrc
+}
