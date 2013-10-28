@@ -1,0 +1,13 @@
+This definition (or _XOPEN_SOURCE >= 500) is required for the ncurses
+headers to expose widechar symbols.
+
+--- origsrc/wyrd-1.4.6/curses/configure.ac	2013-02-02 21:40:48.000000000 -0600
++++ src/wyrd-1.4.6/curses/configure.ac	2013-10-28 16:33:23.372171700 -0500
+@@ -126,6 +126,7 @@ then
+     AC_MSG_CHECKING(for wide character support in ncurses library)
+     AC_TRY_LINK(
+       [#include <wchar.h>
++       #define _XOPEN_SOURCE_EXTENDED
+        #include CURSES_HEADER
+       ],
+       [wchar_t wch = 0;

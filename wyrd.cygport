@@ -13,6 +13,7 @@ a scrollable timetable suitable for visualizing your schedule at a glance."
 REQUIRES="remind"
 HOMEPAGE="http://pessimization.com/software/wyrd/"
 SRC_URI="http://pessimization.com/software/wyrd/${P}.tar.gz"
+PATCH_URI="1.4.6-Wimplicit-decls.patch"
 
 src_compile() {
 	cd ${S}
